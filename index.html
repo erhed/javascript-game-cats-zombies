@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Catz</title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="environment.css" />
+    <link rel="stylesheet" href="radar.css" />
+    <link rel="stylesheet" href="animations.css" />
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+  </head>
+  <body>
+    <!-- AUDIO -->
+    <audio id="audio-wind" loop preload="auto"><source src="audio/wind.mp3" /></audio>
+    <audio id="audio-zombie-inner" loop preload="auto"><source src="audio/zombie_inner.mp3" /></audio>
+    <audio id="audio-zombie-outer" loop preload="auto"><source src="audio/zombie_outer.mp3" /></audio>
+    <audio id="audio-theme" loop preload="auto"><source src="audio/song.mp3" /></audio>
+    <audio id="audio-cat" preload="auto"><source src="audio/cat.mp3" /></audio>
+    <audio id="audio-gameover" preload="auto"><source src="audio/gameover.mp3" /></audio>
+    <audio id="audio-win" preload="auto"><source src="audio/win.mp3" /></audio>
+    <audio id="audio-bells" preload="auto"><source src="audio/bells.mp3" /></audio>
+    <audio id="audio-left-foot" preload="auto"><source src="audio/walk_left.mp3" /></audio>
+    <audio id="audio-right-foot" preload="auto"><source src="audio/walk_right.mp3" /></audio>
+    <audio id="audio-bongo" loop preload="auto"><source src="audio/bongo.mp3" /></audio>
+    
+    <!-- VISUALS -->
+    <div class="wrapper">
+      <img id="logo" src="img/logo.svg" />
+      <div id="sky"></div>
+      <div id="ground"></div>
+      <div id="generatedItems"></div>
+      <div id="cat-container"><img id="cat" src="img/cat.svg" /></div>
+      <div id="guiItems">
+        <div id="score"></div>
+      </div>
+      <div id="menu-item-1-bg-1"></div>
+      <div id="menu-item-play" onclick="startPlaying()">play</div>
+      <div id="round-plane-1"></div>
+      <div id="bound-up"></div>
+      <div id="bound-down"></div>
+      <div id="bound-left"></div>
+      <div id="bound-right"></div>
+      <div id="gameoverscreen">
+        <div id="gameovertext">YOU DIED</div>
+        <div id="gameoverscore"></div>
+      </div>
+      <div id="wintext">You saved them!</div>
+    </div>
+
+    <!-- RADAR -->
+    <div id="radar-enemy-container">
+      <div id="radar-bg"></div>
+      <div id="radar-inner-1"><img src="img/radarenemy2i.svg" /></div>
+      <div id="radar-inner-2"><img src="img/radarenemy2i.svg" /></div>
+      <div id="radar-inner-3"><img src="img/radarenemy2i.svg" /></div>
+      <div id="radar-outer-1"><img src="img/radarenemy2o.svg" /></div>
+      <div id="radar-outer-2"><img src="img/radarenemy2o.svg" /></div>
+      <div id="radar-outer-3"><img src="img/radarenemy2o.svg" /></div>
+      <div id="radar-bg-round"></div>
+      <div id="radar-bg-round-2"></div>
+      <div id="radar-bg-round-3"></div>
+      <div id="radar-cat-1"></div>
+      <div id="radar-cat-2"></div>
+      <div id="radar-cat-3"></div>
+      <div id="radar-cat-4"></div>
+      <div id="radar-cat-5"></div>
+      <div id="radar-cat-6"></div>
+      <div id="radar-cat-7"></div>
+      <div id="radar-cat-8"></div>
+    </div>
+
+    <!-- CONTROLS -->
+
+    <!-- ARROWS -->
+    <div id="controls">
+      <div id="controls-space"></div>
+      <div id="control-up"><img id="up-img" width="40" src="img/up.svg" /></div>
+      <div id="controls-space"></div>
+      <div id="control-left">
+        <img id="left-img" width="40" src="img/left.svg" />
+      </div>
+      <div id="controls-space"></div>
+      <div id="control-right">
+        <img id="right-img" width="40" src="img/right.svg" />
+      </div>
+      <div id="controls-space"></div>
+      <div id="control-down">
+        <img id="down-img" width="40" src="img/down.svg" />
+      </div>
+      <div id="controls-space"></div>
+    </div>
+
+    <!-- TAP AREAS -->
+    <div id="control-click-up" onclick="walkAround('up')"></div>
+    <div id="control-click-left" onclick="walkAround('left')"></div>
+    <div id="control-click-right" onclick="walkAround('right')"></div>
+    <div id="control-click-down" onclick="walkAround('down')"></div>
+
+    <script src="system.js"></script>
+  </body>
+</html>

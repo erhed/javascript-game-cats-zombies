@@ -1,0 +1,256 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* border: 1px solid blue; */
+  /*transition: all 0.2s ease-in-out;*/
+}
+
+body {
+  overflow: hidden;
+  position: fixed;
+  max-height: 100vh;
+}
+
+/* Controls/Arrows */
+
+#controls {
+  display: grid;
+  grid-template-columns: 70px 70px 70px;
+  grid-template-rows: 70px 70px 70px;
+  position: absolute;
+  bottom: 60px;
+  left: 26vw;
+  height: 150px;
+  width: 150px;
+  opacity: 1;
+  z-index: 200;
+  transform: scale(1);
+  animation: animationNavigationArrows 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+#control-up,
+#control-down,
+#control-left,
+#control-right {
+  transform: scale(1);
+}
+
+img[id*="-img"] {
+  opacity: 0.07;
+}
+
+/* TAP AREAS (invisible) */
+
+#control-click-up {
+  /* background-color: blue; */
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  bottom: 150px;
+  left: 41vw;
+  z-index: 300;
+  /* opacity: 0.5; */
+}
+
+#control-click-left {
+  /* background-color: blue; */
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  bottom: 85px;
+  left: 23vw;
+  z-index: 300;
+  /* opacity: 0.5; */
+}
+
+#control-click-right {
+  /* background-color: blue; */
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  bottom: 85px;
+  left: 59vw;
+  z-index: 300;
+  /* opacity: 0.5; */
+}
+
+#control-click-down {
+  /* background-color: blue; */
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  bottom: 20px;
+  left: 41vw;
+  z-index: 300;
+  /* opacity: 0.5; */
+}
+
+/* GUI */
+
+#score {
+  font-size: 0.8em;
+  text-align: center;
+  color: rgb(249, 255, 168);
+  /* font-weight: bold; */
+  font-family: arial;
+  margin-top: 96px;
+  opacity: 1;
+  /* text-shadow: 0px 0px 24px rgb(31, 31, 31); */
+}
+
+#bound-up,
+#bound-down,
+#bound-left,
+#bound-right {
+  background-color: rgb(5, 66, 2);
+  z-index: 300;
+  opacity: 0;
+}
+
+#bound-up {
+  height: 7px;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  /* border-bottom: 2px solid red; */
+}
+
+#bound-down {
+  height: 7px;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  /* border-top: 2px solid red; */
+}
+
+#bound-left {
+  height: 100vh;
+  width: 7px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  /* border-right: 2px solid red; */
+}
+
+#bound-right {
+  height: 100vh;
+  width: 7px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  /* border-left: 2px solid red; */
+}
+
+/* PLAY BUTTON SPLASH SCREEN */
+
+#logo {
+  width: 240px;
+  position: absolute;
+  top: 90px;
+  left: 17vw;
+}
+
+#menu-item-1-bg-1 {
+  width: 70vw;
+  height: 60px;
+  background-color: rgb(243, 226, 74);
+  position: absolute;
+  bottom: 100px;
+  left: 15vw;
+  z-index: 500;
+  border-radius: 30px;
+  box-shadow: 4px 4px 0px rgb(11, 117, 34);
+  animation: menuItemBg1 2s ease-in-out;
+  animation-iteration-count: infinite;
+  border: 3px solid rgb(11, 117, 34);
+}
+
+#menu-item-play {
+  width: 70vw;
+  height: 80px;
+  line-height: 80px;
+  position: absolute;
+  bottom: 91px;
+  left: 15vw;
+  z-index: 500;
+  border-radius: 30px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 1.8em;
+  color: rgb(11, 117, 34);
+  text-shadow: 0px 0px 0px rgb(11, 117, 34);
+  transform: scale(1) rotate(0deg);
+  animation: menuItemPlay 2s ease-in-out;
+  animation-delay: 0.08s;
+  animation-iteration-count: infinite;
+}
+
+/* CAT */
+
+#cat {
+  position: absolute;
+  bottom: 130px;
+  left: 35vw;;
+  z-index: 21;
+  height: 15vh;
+  opacity: 0;
+}
+
+.cat-fadeout {
+  opacity: 1;
+}
+
+/* GAME OVER / WIN */
+
+#gameoverscreen {
+  /* background-color: rgb(177, 58, 58); */
+  background-image: linear-gradient(rgb(197, 76, 76),rgb(177, 58, 58));
+  position: absolute;
+  top: -100vh;
+  width: 100vw;
+  height: 100vh;
+  z-index: 400;
+  opacity: 0.92;
+  text-align: center;
+}
+
+#gameovertext {
+  margin-top: 13vh;
+  font-family: 'Fjalla One', sans-serif;
+  font-weight: bold;
+  font-size: 4em;
+  color: rgb(82, 0, 0);
+}
+
+#gameoverscore {
+  margin-top: 10vh;
+  font-family: 'Fjalla One', sans-serif;
+  font-weight: bold;
+  font-size: 1.8em;
+  color: rgb(126, 22, 22);
+}
+
+#gameoverscore-score {
+  font-family: 'Fjalla One', sans-serif;
+  font-weight: bold;
+  font-size: 2.2em;
+  color: rgb(246, 248, 114);
+  display: block;
+  margin-top: 1vh;
+}
+
+#wintext {
+  margin-top: 17vh;
+  font-family: 'Fjalla One', sans-serif;
+  font-weight: bold;
+  font-size: 2.3em;
+  color: rgb(122, 131, 0);
+  opacity: 1;
+  text-align: center;
+  animation: winText 3s ease-in-out;
+  animation-iteration-count: infinite;
+}

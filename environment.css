@@ -1,0 +1,261 @@
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+#sky {
+  /* background-image: linear-gradient(rgb(73, 76, 255), rgb(168, 203, 255)); */
+  background-image: linear-gradient(rgb(231, 126, 40), rgb(243, 226, 74));
+  width: 100vw;
+  height: 55vh;
+  position: absolute;
+  top: 0;
+  z-index: -100;
+}
+
+#ground {
+  /* background-color: rgb(41, 156, 41); */
+  background-image: linear-gradient(rgb(88, 161, 88), rgb(108, 146, 37));
+  width: 100vw;
+  height: 45vh;
+  position: absolute;
+  top: 55vh;
+  z-index: -80;
+}
+
+#tree1 {
+  left: var(--tree-left);
+  z-index: 1;
+  width: 100vw;
+  top: 40vh;
+  position: absolute;
+}
+
+#tree2 {
+  left: var(--tree-left);
+  z-index: 1;
+  width: 100vw;
+  top: 40vh;
+  position: absolute;
+}
+
+#tree3 {
+  z-index: 1;
+  width: 100vw;
+  top: 40vh;
+  position: absolute;
+}
+
+#tree4 {
+  z-index: 1;
+  width: 100vw;
+  top: 40vh;
+  position: absolute;
+}
+
+#mountain1 {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-image: linear-gradient(-90deg, rgb(71, 81, 97), rgb(71, 60, 52));
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#mountain2 {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-image: linear-gradient(-90deg, rgb(71, 81, 97), rgb(71, 60, 52));
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#mountain3 {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-image: linear-gradient(-90deg, rgb(71, 81, 97), rgb(71, 60, 52));
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+#wrap1 {
+  width: 160px;
+  height: 250px;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  justify-items: center;
+  position: absolute;
+  top: 70px;
+}
+
+#wrap2 {
+  width: 200px;
+  height: 200px;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  justify-items: center;
+  position: absolute;
+  top: 70px;
+}
+
+#wrap3 {
+  width: 200px;
+  height: 200px;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  justify-items: center;
+  position: absolute;
+  top: 70px;
+}
+
+#wrap4 {
+  width: 200px;
+  height: 200px;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  justify-items: center;
+  position: absolute;
+  top: 70px;
+}
+
+#triangle11, #triangle12, #triangle13 {
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  top: 5vh;
+  left: 0vw;
+  clip: rect(auto, 180px, auto, 100px);
+  transform: scaleX(0.6) scaleY(1) rotate(-90deg);
+  z-index: 3;
+  animation: animationTreeTriangle1 5s infinite;
+  animation-timing-function: linear;
+}
+
+#triangle11::after, #triangle12::after, #triangle13::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #014b1a), color-stop(100%, #016d19));
+  transform: rotate(-45deg);
+}
+
+#triangle11.mushroomMode::after {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ea1bf1), color-stop(100%, #d40c7a));
+}
+
+#triangle12.mushroomMode::after {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #0f82ee), color-stop(100%, #009b67));
+}
+
+#triangle13.mushroomMode::after {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #6b60ff), color-stop(100%, #038a83));
+}
+
+
+#triangle21, #triangle22, #triangle23 {
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  top: 11vh;
+  left: 0vw;
+  clip: rect(auto, 180px, auto, 100px);
+  transform: scaleX(0.7) scaleY(1.1) rotate(-90deg);
+  z-index: 2;
+  animation: animationTreeTriangle2 5s infinite;
+  animation-timing-function: linear;
+  animation-delay: 0.6s;
+}
+
+#triangle21::after, #triangle22::after, #triangle23::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #014b1a), color-stop(100%, #016d19));
+  transform: rotate(-45deg);
+}
+
+#triangle21.mushroomMode::after {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ff0000), color-stop(100%, #f17500));
+}
+
+#triangle22.mushroomMode::after {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ee0f77), color-stop(100%, #bc08e9));
+}
+
+#triangle23.mushroomMode::after {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1eeb1e), color-stop(100%, #0787a7));
+}
+
+#triangle31, #triangle32, #triangle33 {
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  top: 18vh;
+  left: 0vw;
+  clip: rect(auto, 180px, auto, 100px);
+  transform: scaleX(0.82) scaleY(1.3) rotate(-90deg);
+  z-index: 1;
+  animation: animationTreeTriangle3 5s infinite;
+  animation-timing-function: linear;
+  animation-delay: 0.2s;
+}
+
+#triangle31::after, #triangle32::after, #triangle33::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #014b1a), color-stop(100%, #016d19));
+  transform: rotate(-45deg);
+}
+
+#triangle31.mushroomMode::after {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #b766fa), color-stop(100%, #c406c4));
+}
+
+#triangle32.mushroomMode::after {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f36c5a), color-stop(100%, #00ff4c));
+}
+
+#triangle33.mushroomMode::after {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #37afff), color-stop(100%, #e63c08));
+}
+
+#rectangle1, #rectangle2, #rectangle3 {
+  /* background-color: rgb(17, 71, 0); */
+  background-image: linear-gradient(90deg, rgb(14, 61, 0),rgb(20, 85, 0));
+  width: 20px;
+  height: 80px;
+  position: absolute;
+  top: 20vh;
+  left: 19vw;
+  z-index: -1;
+}
+
+#rectangle1.mushroomMode {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f36c5a), color-stop(100%, #03962f));
+}
+
+#rectangle2.mushroomMode {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fa280c), color-stop(100%, #039ad6));
+}
+
+#rectangle3.mushroomMode {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f36c5a), color-stop(100%, #cc00ff));
+}
