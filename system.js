@@ -1,6 +1,6 @@
 "use strict";
 
-// Open 'system.html' in a browser for a visual representation of the game mecanics
+// Open 'system.html' in a browser for a visual representation of the game mechanics
 
 // When player moves, enemies move. If an enemy is 1 position away from the player the game is over.
 // Radar detects enemies 3 positions away in any one direction.
